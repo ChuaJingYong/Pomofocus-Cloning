@@ -1,23 +1,24 @@
 // Initialize variable myInterval and startButton
-var myInterval;
+var myInterval, defaultValue = "0:05";
 var startButton = document.getElementById("startbutton")
 
 startButton.onclick = function(){
     var timerValue = document.getElementById("timestring")
     console.log("startButton value", timerValue.innerHTML)
-    //run this thang every 1 seconds
+    //run myTimer function every 1 seconds
     myInterval = setInterval(myTimer, 1000);
 }
 
-var stopButton = document.getElementById("stopbutton")
-stopButton.addEventListener("click",myStopFunction)
-// stopButton.onclick = function(){myStopFunction};
+// Pauses the timer when clicked
+var pauseButton = document.getElementById("pausebutton")
+pauseButton.addEventListener("click",myStopFunction)
 
 function myStopFunction() {
     console.log("Timer paused")
     clearInterval(myInterval);
   }
 
+// Takes in current timer value and decrease by 1 second until the value hits "0:00"
 function myTimer(){
         // Get current HTML value
         var currentValue = document.getElementById("timestring").innerHTML; 
@@ -43,6 +44,7 @@ function myTimer(){
         console.log("updateTime value is ",updatedTime)
         document.getElementById("timestring").innerHTML = updatedTime;
 
+        // Alerts user and resets back timer value
         if (updatedTime == "0:00"){
             // play audio sound when timer hits 0:00
             var snd = new Audio('/mixkit-classic-alarm-995.wav');
@@ -50,7 +52,7 @@ function myTimer(){
             myStopFunction();
 
             // reset back clock default value
-            document.getElementById("timestring").innerHTML = "0:05";
+            document.getElementById("timestring").innerHTML = defaultValue;
             
             // alert("Time to take a break!");
         }
