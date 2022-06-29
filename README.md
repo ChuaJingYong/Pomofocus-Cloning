@@ -3,7 +3,7 @@
 For those who are here from watching the recorded video, it is highly recommended to just use 3 main files and follow along with the video to maximize your learning experience.
 
 ### Semi-completed folder
-Contains the "completed" files for you refer to after watching the video
+Contains the "completed" files for you refer to and compare after watching the recorded session
 
 ### Fully-completed folder
 Contains the optimized completed files, without the additional CSS files and HTML pages. Completed features includes smooth switching between modes
