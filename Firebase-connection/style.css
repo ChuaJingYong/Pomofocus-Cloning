@@ -1,0 +1,114 @@
+:root{
+  --primary-color: #e6575b;
+  --secondary-color: rgb(244, 170, 165, 25%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--primary-color);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+p{
+  color: white;
+}
+
+nav{
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > a{
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.icon{
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.nav-items > li{
+  display: flex;
+}
+
+.nav-items > li > ul > a{
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  width: 50%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.pomo-choice > li{
+  display: flex;
+  justify-content: center;
+}
+
+.pomo-choice > li > ul{
+  display: flex;
+}
+
+.pomo-choice > li > ul > a{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.pomo-choice > li > ul > a:hover{
+  background-color: var(--primary-color);
+}
+
+.timer > p{
+  font-size: 100px;
+  margin: 2rem 0;
+}
+
+.start-btn{
+  padding: 0.5rem 2rem;
+  font-size: large;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  color: var(--primary-color);
+}
+
+.start-btn:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* .tasks{
+  background-color: green;
+} */
